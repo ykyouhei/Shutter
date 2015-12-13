@@ -14,6 +14,7 @@
 		41C8F41C1C1D1C2300DB9B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C8F41A1C1D1C2300DB9B7D /* LaunchScreen.storyboard */; };
 		41C8F4271C1D1C2300DB9B7D /* ShutterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8F4261C1D1C2300DB9B7D /* ShutterTests.swift */; };
 		41C8F4381C1D2BA100DB9B7D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F4371C1D2BA000DB9B7D /* Result.framework */; };
+		41C8F43B1C1D356900DB9B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41C8F43D1C1D356900DB9B7D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,10 @@
 		41C8F4261C1D1C2300DB9B7D /* ShutterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterTests.swift; sourceTree = "<group>"; };
 		41C8F4281C1D1C2300DB9B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41C8F4371C1D2BA000DB9B7D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		41C8F43C1C1D356900DB9B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		41C8F43E1C1D358B00DB9B7D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		41C8F43F1C1D358B00DB9B7D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		41C8F4401C1D358B00DB9B7D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,7 @@
 				41C8F4181C1D1C2300DB9B7D /* Assets.xcassets */,
 				41C8F41D1C1D1C2300DB9B7D /* Info.plist */,
 				41C8F41A1C1D1C2300DB9B7D /* LaunchScreen.storyboard */,
+				41C8F43D1C1D356900DB9B7D /* Localizable.strings */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 41C8F4051C1D1C2300DB9B7D;
 			productRefGroup = 41C8F40F1C1D1C2300DB9B7D /* Products */;
@@ -223,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41C8F41C1C1D1C2300DB9B7D /* LaunchScreen.storyboard in Resources */,
+				41C8F43B1C1D356900DB9B7D /* Localizable.strings in Resources */,
 				41C8F4191C1D1C2300DB9B7D /* Assets.xcassets in Resources */,
 				41C8F4171C1D1C2300DB9B7D /* Main.storyboard in Resources */,
 			);
@@ -288,6 +296,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				41C8F4161C1D1C2300DB9B7D /* Base */,
+				41C8F43E1C1D358B00DB9B7D /* ja */,
 			);
 			name = Main.storyboard;
 			path = .;
@@ -297,9 +306,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				41C8F41B1C1D1C2300DB9B7D /* Base */,
+				41C8F43F1C1D358B00DB9B7D /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		41C8F43D1C1D356900DB9B7D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41C8F43C1C1D356900DB9B7D /* Base */,
+				41C8F4401C1D358B00DB9B7D /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
