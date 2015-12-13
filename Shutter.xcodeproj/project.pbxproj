@@ -13,6 +13,7 @@
 		41C8F4191C1D1C2300DB9B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C8F4181C1D1C2300DB9B7D /* Assets.xcassets */; };
 		41C8F41C1C1D1C2300DB9B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C8F41A1C1D1C2300DB9B7D /* LaunchScreen.storyboard */; };
 		41C8F4271C1D1C2300DB9B7D /* ShutterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8F4261C1D1C2300DB9B7D /* ShutterTests.swift */; };
+		41C8F4381C1D2BA100DB9B7D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F4371C1D2BA000DB9B7D /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		41C8F4221C1D1C2300DB9B7D /* ShutterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C8F4261C1D1C2300DB9B7D /* ShutterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterTests.swift; sourceTree = "<group>"; };
 		41C8F4281C1D1C2300DB9B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41C8F4371C1D2BA000DB9B7D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C8F4381C1D2BA100DB9B7D /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 				41C8F4101C1D1C2300DB9B7D /* Shutter */,
 				41C8F4251C1D1C2300DB9B7D /* ShutterTests */,
 				41C8F40F1C1D1C2300DB9B7D /* Products */,
+				41C8F4361C1D2B5900DB9B7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +132,14 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		41C8F4361C1D2B5900DB9B7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41C8F4371C1D2BA000DB9B7D /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +150,7 @@
 				41C8F40A1C1D1C2300DB9B7D /* Sources */,
 				41C8F40B1C1D1C2300DB9B7D /* Frameworks */,
 				41C8F40C1C1D1C2300DB9B7D /* Resources */,
+				41C8F4351C1D268C00DB9B7D /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -223,6 +236,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41C8F4351C1D268C00DB9B7D /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41C8F40A1C1D1C2300DB9B7D /* Sources */ = {
@@ -359,6 +390,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Shutter/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.koganepj.Shutter;
@@ -370,6 +405,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Shutter/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.koganepj.Shutter;
