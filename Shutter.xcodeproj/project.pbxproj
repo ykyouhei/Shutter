@@ -77,12 +77,11 @@
 		41C8F4101C1D1C2300DB9B7D /* Shutter */ = {
 			isa = PBXGroup;
 			children = (
+				41C8F4331C1D1CA400DB9B7D /* Models */,
+				41C8F4341C1D1CAD00DB9B7D /* SupportingFiles */,
+				41C8F4311C1D1C9500DB9B7D /* ViewControllers */,
+				41C8F4321C1D1C9E00DB9B7D /* Views */,
 				41C8F4111C1D1C2300DB9B7D /* AppDelegate.swift */,
-				41C8F4131C1D1C2300DB9B7D /* ViewController.swift */,
-				41C8F4151C1D1C2300DB9B7D /* Main.storyboard */,
-				41C8F4181C1D1C2300DB9B7D /* Assets.xcassets */,
-				41C8F41A1C1D1C2300DB9B7D /* LaunchScreen.storyboard */,
-				41C8F41D1C1D1C2300DB9B7D /* Info.plist */,
 			);
 			path = Shutter;
 			sourceTree = "<group>";
@@ -90,10 +89,43 @@
 		41C8F4251C1D1C2300DB9B7D /* ShutterTests */ = {
 			isa = PBXGroup;
 			children = (
-				41C8F4261C1D1C2300DB9B7D /* ShutterTests.swift */,
 				41C8F4281C1D1C2300DB9B7D /* Info.plist */,
+				41C8F4261C1D1C2300DB9B7D /* ShutterTests.swift */,
 			);
 			path = ShutterTests;
+			sourceTree = "<group>";
+		};
+		41C8F4311C1D1C9500DB9B7D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41C8F4151C1D1C2300DB9B7D /* Main.storyboard */,
+				41C8F4131C1D1C2300DB9B7D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		41C8F4321C1D1C9E00DB9B7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		41C8F4331C1D1CA400DB9B7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		41C8F4341C1D1CAD00DB9B7D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				41C8F4181C1D1C2300DB9B7D /* Assets.xcassets */,
+				41C8F41D1C1D1C2300DB9B7D /* Info.plist */,
+				41C8F41A1C1D1C2300DB9B7D /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +259,7 @@
 				41C8F4161C1D1C2300DB9B7D /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		41C8F41A1C1D1C2300DB9B7D /* LaunchScreen.storyboard */ = {
@@ -235,6 +268,7 @@
 				41C8F41B1C1D1C2300DB9B7D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -325,7 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Shutter/Info.plist;
+				INFOPLIST_FILE = Shutter/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.koganepj.Shutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,7 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Shutter/Info.plist;
+				INFOPLIST_FILE = Shutter/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.koganepj.Shutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,6 +420,7 @@
 				41C8F42D1C1D1C2300DB9B7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41C8F42E1C1D1C2300DB9B7D /* Build configuration list for PBXNativeTarget "ShutterTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +429,7 @@
 				41C8F4301C1D1C2300DB9B7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
