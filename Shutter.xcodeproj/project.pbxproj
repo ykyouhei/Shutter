@@ -77,10 +77,10 @@
 		41C8F4101C1D1C2300DB9B7D /* Shutter */ = {
 			isa = PBXGroup;
 			children = (
-				41C8F4331C1D1CA400DB9B7D /* Models */,
-				41C8F4341C1D1CAD00DB9B7D /* SupportingFiles */,
 				41C8F4311C1D1C9500DB9B7D /* ViewControllers */,
 				41C8F4321C1D1C9E00DB9B7D /* Views */,
+				41C8F4331C1D1CA400DB9B7D /* Models */,
+				41C8F4341C1D1CAD00DB9B7D /* SupportingFiles */,
 				41C8F4111C1D1C2300DB9B7D /* AppDelegate.swift */,
 			);
 			path = Shutter;
