@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Result
 
 class ViewController: UIViewController {
 
