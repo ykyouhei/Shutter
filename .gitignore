@@ -34,4 +34,6 @@ Carthage/Build
 
 # Fastlane
 screenshots/
+fastlane/report.xml
+fastlane/test_output/
 

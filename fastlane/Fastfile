@@ -22,19 +22,28 @@ default_platform :ios
 
 
 platform :ios do
+
+  # すべてのlane実行前に行う処理
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
     
     carthage
     # increment_build_number
-
-    # xctool # run the tests of your app
   end
 
   desc "Runs all the tests"
   lane :test do
+    system("say テストを実行します")
+    scan()
+  end
+
+
+  desc "スクリーンショット撮影"
+  lane :snapshot do
+    system("say スクリーンショットを撮影します")
     snapshot
   end
+
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
