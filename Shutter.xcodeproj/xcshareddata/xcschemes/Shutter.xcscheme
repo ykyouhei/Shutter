@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Shutter.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "416162671C255C0F00FAEDCE"
+               BuildableName = "ShutterUITests.xctest"
+               BlueprintName = "ShutterUITests"
+               ReferencedContainer = "container:Shutter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

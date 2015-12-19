@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4161626B1C255C0F00FAEDCE /* ShutterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161626A1C255C0F00FAEDCE /* ShutterUITests.swift */; };
+		416162731C255C4000FAEDCE /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416162721C255C4000FAEDCE /* SnapshotHelper.swift */; };
+		416162751C255C7000FAEDCE /* FastlaneSnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416162741C255C7000FAEDCE /* FastlaneSnapshotUITests.swift */; };
 		41C8F4121C1D1C2300DB9B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8F4111C1D1C2300DB9B7D /* AppDelegate.swift */; };
 		41C8F4141C1D1C2300DB9B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8F4131C1D1C2300DB9B7D /* ViewController.swift */; };
 		41C8F4171C1D1C2300DB9B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C8F4151C1D1C2300DB9B7D /* Main.storyboard */; };
@@ -34,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4161626D1C255C0F00FAEDCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41C8F4061C1D1C2300DB9B7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41C8F40D1C1D1C2300DB9B7D;
+			remoteInfo = Shutter;
+		};
 		41C8F4231C1D1C2300DB9B7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 41C8F4061C1D1C2300DB9B7D /* Project object */;
@@ -44,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		416162681C255C0F00FAEDCE /* ShutterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4161626A1C255C0F00FAEDCE /* ShutterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterUITests.swift; sourceTree = "<group>"; };
+		4161626C1C255C0F00FAEDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		416162721C255C4000FAEDCE /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		416162741C255C7000FAEDCE /* FastlaneSnapshotUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastlaneSnapshotUITests.swift; sourceTree = "<group>"; };
 		41C8F40E1C1D1C2300DB9B7D /* Shutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C8F4111C1D1C2300DB9B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C8F4131C1D1C2300DB9B7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +93,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		416162651C255C0F00FAEDCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41C8F40B1C1D1C2300DB9B7D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,11 +134,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		416162691C255C0F00FAEDCE /* ShutterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				416162741C255C7000FAEDCE /* FastlaneSnapshotUITests.swift */,
+				416162721C255C4000FAEDCE /* SnapshotHelper.swift */,
+				4161626A1C255C0F00FAEDCE /* ShutterUITests.swift */,
+				4161626C1C255C0F00FAEDCE /* Info.plist */,
+			);
+			path = ShutterUITests;
+			sourceTree = "<group>";
+		};
 		41C8F4051C1D1C2300DB9B7D = {
 			isa = PBXGroup;
 			children = (
 				41C8F4101C1D1C2300DB9B7D /* Shutter */,
 				41C8F4251C1D1C2300DB9B7D /* ShutterTests */,
+				416162691C255C0F00FAEDCE /* ShutterUITests */,
 				41C8F40F1C1D1C2300DB9B7D /* Products */,
 				41C8F4361C1D2B5900DB9B7D /* Frameworks */,
 			);
@@ -127,6 +161,7 @@
 			children = (
 				41C8F40E1C1D1C2300DB9B7D /* Shutter.app */,
 				41C8F4221C1D1C2300DB9B7D /* ShutterTests.xctest */,
+				416162681C255C0F00FAEDCE /* ShutterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +248,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		416162671C255C0F00FAEDCE /* ShutterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4161626F1C255C0F00FAEDCE /* Build configuration list for PBXNativeTarget "ShutterUITests" */;
+			buildPhases = (
+				416162641C255C0F00FAEDCE /* Sources */,
+				416162651C255C0F00FAEDCE /* Frameworks */,
+				416162661C255C0F00FAEDCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4161626E1C255C0F00FAEDCE /* PBXTargetDependency */,
+			);
+			name = ShutterUITests;
+			productName = ShutterUITests;
+			productReference = 416162681C255C0F00FAEDCE /* ShutterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		41C8F40D1C1D1C2300DB9B7D /* Shutter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41C8F42B1C1D1C2300DB9B7D /* Build configuration list for PBXNativeTarget "Shutter" */;
@@ -259,6 +312,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Koganepj;
 				TargetAttributes = {
+					416162671C255C0F00FAEDCE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 41C8F40D1C1D1C2300DB9B7D;
+					};
 					41C8F40D1C1D1C2300DB9B7D = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -284,11 +341,19 @@
 			targets = (
 				41C8F40D1C1D1C2300DB9B7D /* Shutter */,
 				41C8F4211C1D1C2300DB9B7D /* ShutterTests */,
+				416162671C255C0F00FAEDCE /* ShutterUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		416162661C255C0F00FAEDCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41C8F40C1C1D1C2300DB9B7D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +393,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		416162641C255C0F00FAEDCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4161626B1C255C0F00FAEDCE /* ShutterUITests.swift in Sources */,
+				416162751C255C7000FAEDCE /* FastlaneSnapshotUITests.swift in Sources */,
+				416162731C255C4000FAEDCE /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41C8F40A1C1D1C2300DB9B7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +423,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4161626E1C255C0F00FAEDCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41C8F40D1C1D1C2300DB9B7D /* Shutter */;
+			targetProxy = 4161626D1C255C0F00FAEDCE /* PBXContainerItemProxy */;
+		};
 		41C8F4241C1D1C2300DB9B7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 41C8F40D1C1D1C2300DB9B7D /* Shutter */;
@@ -388,6 +468,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		416162701C255C0F00FAEDCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShutterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.koganepj.ShutterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Shutter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		416162711C255C0F00FAEDCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShutterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.koganepj.ShutterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Shutter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		41C8F4291C1D1C2300DB9B7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -473,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kyouhei yamaguchi (7CTVEPPPU9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -490,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: kyouhei yamaguchi (6EC83W22VX)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -530,6 +636,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4161626F1C255C0F00FAEDCE /* Build configuration list for PBXNativeTarget "ShutterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416162701C255C0F00FAEDCE /* Debug */,
+				416162711C255C0F00FAEDCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		41C8F4091C1D1C2300DB9B7D /* Build configuration list for PBXProject "Shutter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
