@@ -37,3 +37,6 @@ screenshots/
 fastlane/report.xml
 fastlane/test_output/
 
+# R.swift
+R.generated.swift
+
