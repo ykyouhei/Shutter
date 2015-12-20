@@ -61,11 +61,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let currentUser = User.currentUser() {
             // ログイン済み
             log.debug(currentUser.description)
+            
+            let camera = Camera()
+            
+            camera.model = "hoge"
+            
+            try! camera.save()
+            
+            
         } else {
             // 未ログイン
             let loginVC = PFLogInViewController()
             
             loginVC.delegate = self
+            loginVC.signUpController?.delegate = self
             loginVC.fields = [
                 .UsernameAndPassword,
                 .LogInButton,
@@ -80,7 +89,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-extension AppDelegate: PFLogInViewControllerDelegate {
+extension AppDelegate: PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+        log.debug(user.description)
+        let rootTabBarController = R.storyboard.main.rootTabBarController()!
+        
+        window?.rootViewController = rootTabBarController
+    }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         log.debug(user.description)
