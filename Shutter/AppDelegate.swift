@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setupParseSDK()
+        
+        checkLogin()
+        
         return true
     }
 
@@ -40,7 +46,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    //========================================================================//
+    // MARK: - Private Method
+    //========================================================================//
+    
+    private func setupParseSDK() {
+        Parse.setApplicationId(Constants.Parse.applicationID, clientKey: Constants.Parse.clientKey)
+        User.registerSubclass()
+    }
+    
+    private func checkLogin() {
+        if let currentUser = User.currentUser() {
+            // ログイン済み
+            log.debug(currentUser.description)
+        } else {
+            // 未ログイン
+            let loginVC = PFLogInViewController()
+            
+            loginVC.delegate = self
+            loginVC.fields = [
+                .UsernameAndPassword,
+                .LogInButton,
+                .SignUpButton,
+                .DismissButton
+            ]
+            
+            window?.rootViewController = loginVC
+        }
+    }
+
+}
 
 
+extension AppDelegate: PFLogInViewControllerDelegate {
+    
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        log.debug(user.description)
+        let rootTabBarController = R.storyboard.main.rootTabBarController()!
+        
+        window?.rootViewController = rootTabBarController
+    }
+    
+    func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
+        log.error(error?.description)
+    }
+    
 }
 
