@@ -34,6 +34,7 @@
 		41C8F45C1C1D4BA400DB9B7D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F45B1C1D4BA400DB9B7D /* SystemConfiguration.framework */; };
 		41C8F45E1C1D4BB700DB9B7D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F45D1C1D4BB700DB9B7D /* libz.tbd */; };
 		41C8F4601C1D4BC600DB9B7D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F45F1C1D4BC600DB9B7D /* libsqlite3.tbd */; };
+		8FEB2A701C379C50007F0DC1 /* PHAsset+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB2A6F1C379C50007F0DC1 /* PHAsset+Metadata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		41C8F45B1C1D4BA400DB9B7D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41C8F45D1C1D4BB700DB9B7D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		41C8F45F1C1D4BC600DB9B7D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8FEB2A6F1C379C50007F0DC1 /* PHAsset+Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PHAsset+Metadata.swift"; path = "Extensions/PHAsset+Metadata.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		41C8F4101C1D1C2300DB9B7D /* Shutter */ = {
 			isa = PBXGroup;
 			children = (
+				8FEB2A6E1C379BBA007F0DC1 /* Extensions */,
 				41C8F4311C1D1C9500DB9B7D /* ViewControllers */,
 				41C8F4321C1D1C9E00DB9B7D /* Views */,
 				41C8F4331C1D1CA400DB9B7D /* Models */,
@@ -243,6 +246,14 @@
 				41C8F4461C1D43D100DB9B7D /* ParseUI.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FEB2A6E1C379BBA007F0DC1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8FEB2A6F1C379C50007F0DC1 /* PHAsset+Metadata.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41C8F4141C1D1C2300DB9B7D /* ViewController.swift in Sources */,
+				8FEB2A701C379C50007F0DC1 /* PHAsset+Metadata.swift in Sources */,
 				41C8F4121C1D1C2300DB9B7D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +655,7 @@
 				416162711C255C0F00FAEDCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41C8F4091C1D1C2300DB9B7D /* Build configuration list for PBXProject "Shutter" */ = {
 			isa = XCConfigurationList;
