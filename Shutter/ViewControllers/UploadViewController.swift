@@ -9,15 +9,16 @@
 import UIKit
 import Photos
 
-class UploadViewController: UIViewController,
+internal final class UploadViewController: UIViewController,
     UICollectionViewDelegate,
     UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
-    var cellSize: CGSize = CGSizeZero
-    var photoAssets: [PHAsset] = []
+    private var cellSize: CGSize = CGSizeZero
+    
+    private var photoAssets: [PHAsset] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
