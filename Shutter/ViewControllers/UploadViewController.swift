@@ -10,8 +10,6 @@ import UIKit
 import Photos
 
 internal final class UploadViewController: UIViewController,
-    UICollectionViewDelegate,
-    UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout {
     
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -94,7 +92,19 @@ internal final class UploadViewController: UIViewController,
         return authorize
     }
  
-    // MARK: UICollectionViewDataSource
+    
+    
+    // MARK: UICollectionViewDelegateFlowLayout
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return self.cellSize
+    }
+    
+}
+
+
+// MARK: - UICollectionViewDataSource
+extension UploadViewController: UICollectionViewDataSource {
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.photoAssets.count
     }
@@ -112,11 +122,6 @@ internal final class UploadViewController: UIViewController,
         }
         
         return cell
-    }
-    
-    // MARK: UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return self.cellSize
     }
     
 }
