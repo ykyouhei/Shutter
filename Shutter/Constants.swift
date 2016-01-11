@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ アプリ共通定数
+ */
 public struct Constants {
     
     public struct Parse {
