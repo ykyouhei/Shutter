@@ -9,14 +9,27 @@
 import UIKit
 import Photos
 
-internal final class UploadViewController: UIViewController,
-    UICollectionViewDelegateFlowLayout {
+internal final class UploadViewController: UIViewController {
+    
+    /* ====================================================================== */
+    // MARK: - Properties
+    /* ====================================================================== */
+    
+    /// 一行に表示するセルの数
+    private let layoutInfo = (numberOfCellsPerRow: 3, cellSpace: CGFloat(1))
+    
+    private var photoAssets: [PHAsset] = []
+    
+    /* ====================================================================== */
+    // MARK: - Outlets
+    /* ====================================================================== */
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private var cellSize: CGSize = CGSizeZero
     
-    private var photoAssets: [PHAsset] = []
+    /* ====================================================================== */
+    // MARK: - View Life Cycle
+    /* ====================================================================== */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +59,15 @@ internal final class UploadViewController: UIViewController,
     }
     
     private func setupCellSize() {
-        let space: Int = 1 //マージン
-        let spaceNum: Int = 2 //スペースの数
-        let cellNum: Int = 3 //セルの数
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        let spaceNum = CGFloat(layoutInfo.numberOfCellsPerRow - 1)
         let screenSizeWidth = UIScreen.mainScreen().bounds.size.width
-        let size = (screenSizeWidth - CGFloat(space * spaceNum)) / CGFloat(cellNum)
-        self.cellSize = CGSizeMake(size, size)
+        let size = (screenSizeWidth - CGFloat(layoutInfo.cellSpace * spaceNum)) / CGFloat(layoutInfo.numberOfCellsPerRow)
+        
+        flowLayout.itemSize = CGSize(width: size, height: size)
     }
     
     // MARK: Photos Framework
@@ -92,13 +108,6 @@ internal final class UploadViewController: UIViewController,
         return authorize
     }
  
-    
-    
-    // MARK: UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return self.cellSize
-    }
-    
 }
 
 
