@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupParseSDK()
         
+        AppColor.setupNavigationBarAppearance()
+        
         return true
     }
 

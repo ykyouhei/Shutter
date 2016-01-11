@@ -20,6 +20,7 @@ internal final class UploadViewController: UIViewController {
     
     private var photoAssets: [PHAsset] = []
     
+    
     /* ====================================================================== */
     // MARK: - Outlets
     /* ====================================================================== */
@@ -33,15 +34,11 @@ internal final class UploadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setupNavigation()
+        
+        title = NSLocalizedString("Upload.Label.Title", comment: "")
+        
         setupCellSize()
         reload()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     private func reload() {
@@ -49,13 +46,6 @@ internal final class UploadViewController: UIViewController {
         dispatch_async(dispatch_get_main_queue(), {
             self.collectionView.reloadData()
         })
-    }
-    
-    private func setupNavigation() {
-        let color = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 1.0)
-        self.navigationController?.navigationBar.barTintColor = color
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.title = "Share"
     }
     
     private func setupCellSize() {
