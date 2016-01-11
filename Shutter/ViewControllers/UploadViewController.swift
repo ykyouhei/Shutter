@@ -60,6 +60,7 @@ internal final class UploadViewController: UIViewController {
         flowLayout.itemSize = CGSize(width: size, height: size)
     }
     
+    // TODO: Managerクラスに分ける
     // MARK: Photos Framework
     private func setupPhotos() {
         
