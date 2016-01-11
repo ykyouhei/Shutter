@@ -6,10 +6,18 @@
 //  Copyright © 2016年 Koganepj. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-struct MainStoryboard {
-    struct ViewControllerIdentifiers {
-        static let showUploadViewController = "HomeToUploadViewController"
+public struct Constants {
+    
+    public struct Parse {
+        
+        public static let applicationID = "VdQyuz3est4UrsPJ6f2Fc0btqiUPIuUFazPFXLhB"
+        
+        public static let clientKey = "dnpdTMRQSyYvgUMpiNoCKz61JSp8jF3VzTayWesJ"
+    
     }
+    
+    
 }
+
