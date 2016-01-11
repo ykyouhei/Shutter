@@ -9,7 +9,7 @@
 import UIKit
 import Result
 
-class ViewController: UIViewController {
+internal final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +18,9 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.performSegueWithIdentifier(MainStoryboard.ViewControllerIdentifiers.showUploadViewController, sender: nil)
+        
+        performSegueWithIdentifier(R.segue.viewController.homeToUploadViewController, sender: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
 }
 
