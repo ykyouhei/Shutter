@@ -40,8 +40,8 @@
 		41D5DD4E1C269EAD004D7F77 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D5DD4D1C269EAD004D7F77 /* XCGLogger.framework */; };
 		41D5DD501C269F0A004D7F77 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5DD4F1C269F0A004D7F77 /* GlobalFunctions.swift */; };
 		8FEB2A721C43DD89007F0DC1 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB2A711C43DD89007F0DC1 /* UploadViewController.swift */; };
+		C25F6BA71C44115200E5599E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25F6BA61C44115200E5599E /* R.generated.swift */; };
 		C266F4751C4402D10069AAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C266F4741C4402D10069AAB5 /* ViewController.swift */; };
-		C266F4771C4403210069AAB5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C266F4761C4403210069AAB5 /* R.generated.swift */; };
 		C266F4791C44089E0069AAB5 /* PHAsset+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C266F4781C44089E0069AAB5 /* PHAsset+Metadata.swift */; };
 		C2BED3941C4409720031C335 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED3931C4409720031C335 /* AppColor.swift */; };
 /* End PBXBuildFile section */
@@ -106,8 +106,8 @@
 		41D5DD4D1C269EAD004D7F77 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = SOURCE_ROOT; };
 		41D5DD4F1C269F0A004D7F77 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		8FEB2A711C43DD89007F0DC1 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		C25F6BA61C44115200E5599E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C266F4741C4402D10069AAB5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C266F4761C4403210069AAB5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C266F4781C44089E0069AAB5 /* PHAsset+Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Metadata.swift"; sourceTree = "<group>"; };
 		C2BED3931C4409720031C335 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,7 +250,7 @@
 		41C8F4341C1D1CAD00DB9B7D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C266F4761C4403210069AAB5 /* R.generated.swift */,
+				C25F6BA61C44115200E5599E /* R.generated.swift */,
 				41C8F4181C1D1C2300DB9B7D /* Assets.xcassets */,
 				41C8F41D1C1D1C2300DB9B7D /* Info.plist */,
 				41C8F41A1C1D1C2300DB9B7D /* LaunchScreen.storyboard */,
@@ -475,11 +475,11 @@
 				8FEB2A721C43DD89007F0DC1 /* UploadViewController.swift in Sources */,
 				C2BED3941C4409720031C335 /* AppColor.swift in Sources */,
 				C266F4791C44089E0069AAB5 /* PHAsset+Metadata.swift in Sources */,
-				C266F4771C4403210069AAB5 /* R.generated.swift in Sources */,
 				41C8F4121C1D1C2300DB9B7D /* AppDelegate.swift in Sources */,
 				41D5DD501C269F0A004D7F77 /* GlobalFunctions.swift in Sources */,
 				416C2CD81C26ABDC00AE8468 /* Camera.swift in Sources */,
 				416162781C26970C00FAEDCE /* User.swift in Sources */,
+				C25F6BA71C44115200E5599E /* R.generated.swift in Sources */,
 				C266F4751C4402D10069AAB5 /* ViewController.swift in Sources */,
 				41D5DD4C1C269ABC004D7F77 /* Constants.swift in Sources */,
 			);

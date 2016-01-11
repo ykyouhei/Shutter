@@ -50,24 +50,24 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Xgm-Yd-f17">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="e3B-kY-tRQ">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KEu-Vh-xap">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7j9-8C-ola">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="KEu-Vh-xap" secondAttribute="bottom" id="21t-fd-CkX"/>
-                                            <constraint firstItem="KEu-Vh-xap" firstAttribute="top" secondItem="Xgm-Yd-f17" secondAttribute="top" id="DIU-Rr-Abf"/>
-                                            <constraint firstAttribute="trailing" secondItem="KEu-Vh-xap" secondAttribute="trailing" id="tYB-Uk-oJi"/>
-                                            <constraint firstItem="KEu-Vh-xap" firstAttribute="leading" secondItem="Xgm-Yd-f17" secondAttribute="leading" id="xPh-xF-lgD"/>
+                                            <constraint firstItem="7j9-8C-ola" firstAttribute="leading" secondItem="e3B-kY-tRQ" secondAttribute="leading" id="1ec-wx-h23"/>
+                                            <constraint firstAttribute="bottom" secondItem="7j9-8C-ola" secondAttribute="bottom" id="7fV-P8-rC7"/>
+                                            <constraint firstAttribute="trailing" secondItem="7j9-8C-ola" secondAttribute="trailing" id="G17-PQ-2b4"/>
+                                            <constraint firstItem="7j9-8C-ola" firstAttribute="top" secondItem="e3B-kY-tRQ" secondAttribute="top" id="ofN-P7-RoR"/>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>

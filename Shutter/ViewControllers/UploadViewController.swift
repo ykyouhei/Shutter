@@ -109,7 +109,9 @@ extension UploadViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
+            R.reuseIdentifier.cell.identifier,
+            forIndexPath: indexPath)
         
         let asset = self.photoAssets[indexPath.row]
         if let imageView = cell.viewWithTag(1) as? UIImageView {
