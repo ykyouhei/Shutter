@@ -34,7 +34,9 @@
 		41C8F45C1C1D4BA400DB9B7D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F45B1C1D4BA400DB9B7D /* SystemConfiguration.framework */; };
 		41C8F45E1C1D4BB700DB9B7D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F45D1C1D4BB700DB9B7D /* libz.tbd */; };
 		41C8F4601C1D4BC600DB9B7D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C8F45F1C1D4BC600DB9B7D /* libsqlite3.tbd */; };
+		8F4D48C71C43EB05003E685F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D48C61C43EB05003E685F /* Constants.swift */; };
 		8FEB2A701C379C50007F0DC1 /* PHAsset+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB2A6F1C379C50007F0DC1 /* PHAsset+Metadata.swift */; };
+		8FEB2A721C43DD89007F0DC1 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB2A711C43DD89007F0DC1 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +93,9 @@
 		41C8F45B1C1D4BA400DB9B7D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41C8F45D1C1D4BB700DB9B7D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		41C8F45F1C1D4BC600DB9B7D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8F4D48C61C43EB05003E685F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8FEB2A6F1C379C50007F0DC1 /* PHAsset+Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PHAsset+Metadata.swift"; path = "Extensions/PHAsset+Metadata.swift"; sourceTree = "<group>"; };
+		8FEB2A711C43DD89007F0DC1 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 				41C8F4331C1D1CA400DB9B7D /* Models */,
 				41C8F4341C1D1CAD00DB9B7D /* SupportingFiles */,
 				41C8F4111C1D1C2300DB9B7D /* AppDelegate.swift */,
+				8F4D48C61C43EB05003E685F /* Constants.swift */,
 			);
 			path = Shutter;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			children = (
 				41C8F4151C1D1C2300DB9B7D /* Main.storyboard */,
 				41C8F4131C1D1C2300DB9B7D /* ViewController.swift */,
+				8FEB2A711C43DD89007F0DC1 /* UploadViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -418,7 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4D48C71C43EB05003E685F /* Constants.swift in Sources */,
 				41C8F4141C1D1C2300DB9B7D /* ViewController.swift in Sources */,
+				8FEB2A721C43DD89007F0DC1 /* UploadViewController.swift in Sources */,
 				8FEB2A701C379C50007F0DC1 /* PHAsset+Metadata.swift in Sources */,
 				41C8F4121C1D1C2300DB9B7D /* AppDelegate.swift in Sources */,
 			);
