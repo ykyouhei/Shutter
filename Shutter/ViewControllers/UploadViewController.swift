@@ -9,27 +9,36 @@
 import UIKit
 import Photos
 
-class UploadViewController: UIViewController,
-    UICollectionViewDelegate,
-    UICollectionViewDataSource,
-    UICollectionViewDelegateFlowLayout {
+internal final class UploadViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    /* ====================================================================== */
+    // MARK: - Properties
+    /* ====================================================================== */
     
-    var cellSize: CGSize = CGSizeZero
-    var photoAssets: [PHAsset] = []
+    /// 一行に表示するセルの数
+    private let layoutInfo = (numberOfCellsPerRow: 3, cellSpace: CGFloat(1))
+    
+    private var photoAssets: [PHAsset] = []
+    
+    
+    /* ====================================================================== */
+    // MARK: - Outlets
+    /* ====================================================================== */
+    
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
+    
+    /* ====================================================================== */
+    // MARK: - View Life Cycle
+    /* ====================================================================== */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setupNavigation()
+        
+        title = NSLocalizedString("Upload.Label.Title", comment: "")
+        
         setupCellSize()
         reload()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     private func reload() {
@@ -39,22 +48,19 @@ class UploadViewController: UIViewController,
         })
     }
     
-    private func setupNavigation() {
-        let color = UIColor(red: 36/255, green: 36/255, blue: 36/255, alpha: 1.0)
-        self.navigationController?.navigationBar.barTintColor = color
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.title = "Share"
-    }
-    
     private func setupCellSize() {
-        let space: Int = 1 //マージン
-        let spaceNum: Int = 2 //スペースの数
-        let cellNum: Int = 3 //セルの数
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        let spaceNum = CGFloat(layoutInfo.numberOfCellsPerRow - 1)
         let screenSizeWidth = UIScreen.mainScreen().bounds.size.width
-        let size = (screenSizeWidth - CGFloat(space * spaceNum)) / CGFloat(cellNum)
-        self.cellSize = CGSizeMake(size, size)
+        let size = (screenSizeWidth - CGFloat(layoutInfo.cellSpace * spaceNum)) / CGFloat(layoutInfo.numberOfCellsPerRow)
+        
+        flowLayout.itemSize = CGSize(width: size, height: size)
     }
     
+    // TODO: Managerクラスに分ける
     // MARK: Photos Framework
     private func setupPhotos() {
         
@@ -93,13 +99,20 @@ class UploadViewController: UIViewController,
         return authorize
     }
  
-    // MARK: UICollectionViewDataSource
+}
+
+
+// MARK: - UICollectionViewDataSource
+extension UploadViewController: UICollectionViewDataSource {
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.photoAssets.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
+            R.reuseIdentifier.cell.identifier,
+            forIndexPath: indexPath)
         
         let asset = self.photoAssets[indexPath.row]
         if let imageView = cell.viewWithTag(1) as? UIImageView {
@@ -111,11 +124,6 @@ class UploadViewController: UIViewController,
         }
         
         return cell
-    }
-    
-    // MARK: UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return self.cellSize
     }
     
 }

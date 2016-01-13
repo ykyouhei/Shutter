@@ -1,1 +1,4 @@
 github "antitypical/Result" ~> 1.0
+github "DaveWoodCom/XCGLogger" ~> 3.0
+github "yeahdongcn/UIColor-Hex-Swift" ~> 1.0
+

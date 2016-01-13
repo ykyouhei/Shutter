@@ -5,3 +5,6 @@
   Created by kyo__hei on 2015/12/13.
   Copyright © 2015年 Koganepj. All rights reserved.
 */
+
+// MARK: - アップロード画面
+"Upload.Label.Title" = "Share";

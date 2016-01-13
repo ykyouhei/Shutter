@@ -46,5 +46,6 @@ $(SRCROOT)/Carthage/Build/iOS/Moge.framework
 利用ライブラリ
 ====
 
+* R.swift
 
 
